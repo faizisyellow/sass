@@ -1,0 +1,9 @@
+@mixin removeLink($a: false) {
+  text-decoration: none;
+
+  @if $a {
+    a {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,11 @@
+@mixin link($direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  li {
+    list-style: none;
+
+    a {
+      text-decoration: none;
+    }
+  }
+}

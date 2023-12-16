@@ -1,0 +1,80 @@
+@use "_vars" as var;
+@use "_removeLink" as remove;
+@mixin aboutComponent($parent, $bg, $colorIcon) {
+  background-color: map-get($map: var.$Color, $key: $bg);
+  color: map-get($map: var.$Color, $key: "white-color");
+  .#{$parent} {
+    margin-left: 25px;
+    h2 {
+      margin-left: 5px;
+      font-family: var.$main-font;
+      font-size: 62.668px;
+      font-weight: 400;
+      text-decoration: none solid rgb(255, 255, 255);
+    }
+    p {
+      text-indent: 8px;
+      max-width: 70%;
+      font-family: var.$text-font;
+      font-size: 23.5005px;
+      line-height: 37.6008px;
+      letter-spacing: 0.25px;
+      font-weight: 400;
+      text-decoration: none solid rgb(255, 255, 255);
+    }
+  }
+  p {
+    font-family: var.$main-font;
+    margin-left: 15px;
+    letter-spacing: 0.25px;
+    a {
+      color: map-get($map: var.$Color, $key: "white-color");
+
+      i {
+        margin-left: 20px;
+        font-size: 20px;
+        color: map-get($map: var.$Color, $key: $colorIcon);
+      }
+    }
+    @include remove.removeLink(true);
+  }
+}
+@mixin aboutComponent($parent, $bg, $colorIcon) {
+  background-color: map-get($map: var.$Color, $key: $bg);
+  color: map-get($map: var.$Color, $key: "white-color");
+  .#{$parent} {
+    margin-left: 25px;
+    h2 {
+      margin-left: 5px;
+      font-family: var.$main-font;
+      font-size: 62.668px;
+      font-weight: 400;
+      text-decoration: none solid rgb(255, 255, 255);
+    }
+    p {
+      text-indent: 8px;
+      max-width: 70%;
+      font-family: var.$text-font;
+      font-size: 23.5005px;
+      line-height: 37.6008px;
+      letter-spacing: 0.25px;
+      font-weight: 400;
+      text-decoration: none solid rgb(255, 255, 255);
+    }
+  }
+  p {
+    font-family: var.$main-font;
+    margin-left: 15px;
+    letter-spacing: 0.25px;
+    a {
+      color: map-get($map: var.$Color, $key: "white-color");
+
+      i {
+        margin-left: 20px;
+        font-size: 20px;
+        color: map-get($map: var.$Color, $key: $colorIcon);
+      }
+    }
+    @include remove.removeLink(true);
+  }
+}

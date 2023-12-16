@@ -1,0 +1,12 @@
+@use "__vars" as var;
+
+@mixin button($height, $weight, $border-radius, $bg, $color-btn) {
+  text-align: center;
+  height: $height;
+  padding: 0 $weight;
+  border-radius: $border-radius;
+  border: none;
+  background-color: map-get($map: var.$Color, $key: $bg);
+  color: map-get($map: var.$Color, $key: $color-btn);
+  cursor: pointer;
+}

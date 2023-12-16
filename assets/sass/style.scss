@@ -1,90 +1,10 @@
-$main-font: "aeonik_pro_trialregular";
-$text-font: "freighttext_book";
-$Color: (
-  "blue-color": #0048ff,
-  "grey-color": #f2f2f2,
-  "green-color": #3ddda8,
-  "white-color": #ffffff,
-  "black-color": #1f2816,
-  "footer-color": #595959,
-);
-@mixin inlineLayout {
-  display: flex;
-  flex-direction: row;
-  max-width: 100vw;
-}
-@mixin removeLink($a: false) {
-  text-decoration: none;
+@use "module/__vars" as var;
+@use "module/__about" as about;
+@use "module/__removeLink" as remove;
+@use "module/__inlineLay" as layout;
+@use "module/__listLink" as list;
+@use "module/__button" as btn;
 
-  @if $a {
-    a {
-      text-decoration: none;
-    }
-  }
-}
-
-@mixin link($direction: row) {
-  display: flex;
-  flex-direction: $direction;
-  li {
-    list-style: none;
-
-    a {
-      text-decoration: none;
-    }
-  }
-}
-
-@mixin button($height, $weight, $border-radius, $bg, $color-btn) {
-  text-align: center;
-  height: $height;
-  padding: 0 $weight;
-  border-radius: $border-radius;
-  border: none;
-  background-color: map-get($map: $Color, $key: $bg);
-  color: map-get($map: $Color, $key: $color-btn);
-  cursor: pointer;
-}
-
-@mixin aboutComponent($parent, $bg, $colorIcon) {
-  background-color: map-get($map: $Color, $key: $bg);
-  color: map-get($map: $Color, $key: "white-color");
-  .#{$parent} {
-    margin-left: 25px;
-    h2 {
-      margin-left: 5px;
-      font-family: $main-font;
-      font-size: 62.668px;
-      font-weight: 400;
-      text-decoration: none solid rgb(255, 255, 255);
-    }
-    p {
-      text-indent: 8px;
-      max-width: 70%;
-      font-family: $text-font;
-      font-size: 23.5005px;
-      line-height: 37.6008px;
-      letter-spacing: 0.25px;
-      font-weight: 400;
-      text-decoration: none solid rgb(255, 255, 255);
-    }
-  }
-  p {
-    font-family: $main-font;
-    margin-left: 15px;
-    letter-spacing: 0.25px;
-    a {
-      color: map-get($map: $Color, $key: "white-color");
-
-      i {
-        margin-left: 20px;
-        font-size: 20px;
-        color: map-get($map: $Color, $key: $colorIcon);
-      }
-    }
-    @include removeLink(true);
-  }
-}
 body {
   padding: 0;
   margin: 0;
@@ -96,7 +16,7 @@ body {
 header {
   max-width: 100vw;
   height: 100px;
-  background-color: map-get($map: $Color, $key: "grey-color");
+  background-color: map-get($map: var.$Color, $key: "grey-color");
   nav {
     display: flex;
     justify-content: space-between;
@@ -107,19 +27,19 @@ header {
       max-height: 100px;
     }
     ul {
-      font-family: $main-font;
+      font-family: var.$main-font;
       font-size: 14px;
-      @include link();
+      @include list.link();
       margin-left: 35%;
       li {
         padding: 0 50px;
         a {
-          color: map-get($map: $Color, $key: "blue-color");
+          color: map-get($map: var.$Color, $key: "blue-color");
         }
       }
     }
     button {
-      @include button(40px, 20px, 20px, green-color, blue-color);
+      @include btn.button(40px, 20px, 20px, green-color, blue-color);
       margin-top: calc(10px / 6);
     }
   }
@@ -132,21 +52,21 @@ main {
     display: flex;
     min-height: 135vh;
     .description {
-      background-color: map-get($map: $Color, $key: "blue-color");
+      background-color: map-get($map: var.$Color, $key: "blue-color");
 
       h1 {
         margin-left: 25px;
-        font-family: $main-font;
-        color: map-get($map: $Color, $key: "white-color");
+        font-family: var.$main-font;
+        color: map-get($map: var.$Color, $key: "white-color");
         font-size: 62px;
         font-weight: 200;
         span {
-          color: map-get($map: $Color, $key: "green-color");
+          color: map-get($map: var.$Color, $key: "green-color");
         }
       }
       p {
-        font-family: $text-font;
-        color: map-get($map: $Color, $key: "white-color");
+        font-family: var.$text-font;
+        color: map-get($map: var.$Color, $key: "white-color");
         font-size: 23px;
         margin-left: 25px;
         width: 75%;
@@ -158,7 +78,7 @@ main {
       max-height: 135vh;
     }
     button {
-      @include button(50px, 45px, 25px, green-color, blue-color);
+      @include btn.button(50px, 45px, 25px, green-color, blue-color);
       margin-top: 25px;
       margin-left: 25px;
       font-weight: 500;
@@ -171,24 +91,24 @@ main {
     justify-content: center;
     padding: 50px 0;
     p {
-      font-family: $main-font;
+      font-family: var.$main-font;
       font-size: 62.668px;
-      color: map-get($map: $Color, $key: "black-color");
+      color: map-get($map: var.$Color, $key: "black-color");
       line-height: 68.9349px;
       vertical-align: baseline;
       font-weight: 400px;
       .color-text {
-        color: map-get($map: $Color, $key: "green-color");
+        color: map-get($map: var.$Color, $key: "green-color");
       }
     }
   }
   .main-tree {
-    @include inlineLayout();
+    @include layout.inlineLayout();
     .about-one {
-      @include aboutComponent(text, blue-color, green-color);
+      @include about.aboutComponent(text, blue-color, green-color);
     }
     .about-two {
-      @include aboutComponent(text, green-color, blue-color);
+      @include about.aboutComponent(text, green-color, blue-color);
     }
   }
 }
