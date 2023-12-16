@@ -1,6 +1,6 @@
-the overview https://opynsite.netlify.app/
+The overview https://opynsite.netlify.app/
 
 
 
 
-shout out to https://www.myopyn.com/
+Shout out to https://www.myopyn.com/
