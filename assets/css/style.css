@@ -35,6 +35,9 @@ header nav ul li a {
 header nav ul li {
   padding: 0 50px;
 }
+header nav ul li a {
+  color: #0048ff;
+}
 header nav button {
   text-align: center;
   height: 40px;
@@ -49,24 +52,139 @@ header nav button {
 
 main .main-one {
   display: flex;
+  min-height: 135vh;
 }
 main .main-one .description {
   background-color: #0048ff;
 }
 main .main-one .description h1 {
+  margin-left: 25px;
   font-family: "aeonik_pro_trialregular";
+  color: #ffffff;
+  font-size: 62px;
+  font-weight: 200;
+}
+main .main-one .description h1 span {
+  color: #3ddda8;
 }
 main .main-one .description p {
   font-family: "freighttext_book";
+  color: #ffffff;
+  font-size: 23px;
+  margin-left: 25px;
+  width: 75%;
+  line-height: 40px;
+}
+main .main-one .img-1 {
+  max-width: 50vw;
+  max-height: 135vh;
 }
 main .main-one button {
   text-align: center;
-  height: 45px;
-  padding: 0 25px;
+  height: 50px;
+  padding: 0 45px;
   border-radius: 25px;
   border: none;
   background-color: #3ddda8;
   color: #0048ff;
   cursor: pointer;
-  margin-top: 10px;
-}/*# sourceMappingURL=style.css.map */
+  margin-top: 25px;
+  margin-left: 25px;
+  font-weight: 500;
+  font-size: medium;
+}
+main .main-two {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+main .main-two p {
+  font-family: "aeonik_pro_trialregular";
+  font-size: 62.668px;
+  color: #1f2816;
+  line-height: 68.9349px;
+  vertical-align: baseline;
+  font-weight: 400px;
+}
+main .main-two p .color-text {
+  color: #3ddda8;
+}
+main .main-tree {
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+}
+main .main-tree .about-one {
+  background-color: #0048ff;
+  color: #ffffff;
+}
+main .main-tree .about-one .text {
+  margin-left: 25px;
+}
+main .main-tree .about-one .text h2 {
+  margin-left: 5px;
+  font-family: "aeonik_pro_trialregular";
+  font-size: 62.668px;
+  font-weight: 400;
+  text-decoration: none solid rgb(255, 255, 255);
+}
+main .main-tree .about-one .text p {
+  text-indent: 8px;
+  max-width: 70%;
+  font-family: "freighttext_book";
+  font-size: 23.5005px;
+  line-height: 37.6008px;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+  text-decoration: none solid rgb(255, 255, 255);
+}
+main .main-tree .about-one p {
+  font-family: "aeonik_pro_trialregular";
+  margin-left: 15px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+}
+main .main-tree .about-one p a {
+  color: #ffffff;
+}
+main .main-tree .about-one p a {
+  text-decoration: none;
+}
+main .main-tree .about-two {
+  background-color: #3ddda8;
+  color: #ffffff;
+}
+main .main-tree .about-two .text {
+  margin-left: 25px;
+}
+main .main-tree .about-two .text h2 {
+  margin-left: 5px;
+  font-family: "aeonik_pro_trialregular";
+  font-size: 62.668px;
+  font-weight: 400;
+  text-decoration: none solid rgb(255, 255, 255);
+}
+main .main-tree .about-two .text p {
+  text-indent: 8px;
+  max-width: 70%;
+  font-family: "freighttext_book";
+  font-size: 23.5005px;
+  line-height: 37.6008px;
+  letter-spacing: 0.25px;
+  font-weight: 400;
+  text-decoration: none solid rgb(255, 255, 255);
+}
+main .main-tree .about-two p {
+  font-family: "aeonik_pro_trialregular";
+  margin-left: 15px;
+  letter-spacing: 0.25px;
+  text-decoration: none;
+}
+main .main-tree .about-two p a {
+  color: #ffffff;
+}
+main .main-tree .about-two p a {
+  text-decoration: none;
+}
+
+/*# sourceMappingURL=style.css.map */

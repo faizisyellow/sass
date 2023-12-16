@@ -8,6 +8,20 @@ $Color: (
   "black-color": #1f2816,
   "footer-color": #595959,
 );
+@mixin inlineLayout {
+  display: flex;
+  flex-direction: row;
+  max-width: 100vw;
+}
+@mixin removeLink($a: false) {
+  text-decoration: none;
+
+  @if $a {
+    a {
+      text-decoration: none;
+    }
+  }
+}
 
 @mixin link($direction: row) {
   display: flex;
@@ -31,7 +45,39 @@ $Color: (
   color: map-get($map: $Color, $key: $color-btn);
   cursor: pointer;
 }
-
+@mixin aboutComponent($parent, $bg) {
+  background-color: map-get($map: $Color, $key: $bg);
+  color: map-get($map: $Color, $key: "white-color");
+  .#{$parent} {
+    margin-left: 25px;
+    h2 {
+      margin-left: 5px;
+      font-family: $main-font;
+      font-size: 62.668px;
+      font-weight: 400;
+      text-decoration: none solid rgb(255, 255, 255);
+    }
+    p {
+      text-indent: 8px;
+      max-width: 70%;
+      font-family: $text-font;
+      font-size: 23.5005px;
+      line-height: 37.6008px;
+      letter-spacing: 0.25px;
+      font-weight: 400;
+      text-decoration: none solid rgb(255, 255, 255);
+    }
+  }
+  p {
+    font-family: $main-font;
+    margin-left: 15px;
+    letter-spacing: 0.25px;
+    a {
+      color: map-get($map: $Color, $key: "white-color");
+    }
+    @include removeLink(true);
+  }
+}
 body {
   padding: 0;
   margin: 0;
@@ -60,6 +106,9 @@ header {
       margin-left: 35%;
       li {
         padding: 0 50px;
+        a {
+          color: map-get($map: $Color, $key: "blue-color");
+        }
       }
     }
     button {
@@ -74,18 +123,65 @@ header {
 main {
   .main-one {
     display: flex;
+    min-height: 135vh;
     .description {
       background-color: map-get($map: $Color, $key: "blue-color");
+
       h1 {
+        margin-left: 25px;
         font-family: $main-font;
+        color: map-get($map: $Color, $key: "white-color");
+        font-size: 62px;
+        font-weight: 200;
+        span {
+          color: map-get($map: $Color, $key: "green-color");
+        }
       }
       p {
         font-family: $text-font;
+        color: map-get($map: $Color, $key: "white-color");
+        font-size: 23px;
+        margin-left: 25px;
+        width: 75%;
+        line-height: 40px;
       }
     }
+    .img-1 {
+      max-width: calc(100vw / 2);
+      max-height: 135vh;
+    }
     button {
-      @include button(45px, 25px, 25px, green-color, blue-color);
-      margin-top: 10px;
+      @include button(50px, 45px, 25px, green-color, blue-color);
+      margin-top: 25px;
+      margin-left: 25px;
+      font-weight: 500;
+      font-size: medium;
+    }
+  }
+
+  .main-two {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    p {
+      font-family: $main-font;
+      font-size: 62.668px;
+      color: map-get($map: $Color, $key: "black-color");
+      line-height: 68.9349px;
+      vertical-align: baseline;
+      font-weight: 400px;
+      .color-text {
+        color: map-get($map: $Color, $key: "green-color");
+      }
+    }
+  }
+  .main-tree {
+    @include inlineLayout();
+    .about-one {
+      @include aboutComponent(text, blue-color);
+    }
+    .about-two {
+      @include aboutComponent(text, green-color);
     }
   }
 }
