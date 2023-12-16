@@ -126,7 +126,8 @@ main .main-tree .about-one .text h2 {
   font-family: "aeonik_pro_trialregular";
   font-size: 62.668px;
   font-weight: 400;
-  text-decoration: none solid rgb(255, 255, 255);
+  -webkit-text-decoration: none solid rgb(255, 255, 255);
+          text-decoration: none solid rgb(255, 255, 255);
 }
 main .main-tree .about-one .text p {
   text-indent: 8px;
@@ -136,7 +137,8 @@ main .main-tree .about-one .text p {
   line-height: 37.6008px;
   letter-spacing: 0.25px;
   font-weight: 400;
-  text-decoration: none solid rgb(255, 255, 255);
+  -webkit-text-decoration: none solid rgb(255, 255, 255);
+          text-decoration: none solid rgb(255, 255, 255);
 }
 main .main-tree .about-one p {
   font-family: "aeonik_pro_trialregular";
@@ -162,7 +164,8 @@ main .main-tree .about-two .text h2 {
   font-family: "aeonik_pro_trialregular";
   font-size: 62.668px;
   font-weight: 400;
-  text-decoration: none solid rgb(255, 255, 255);
+  -webkit-text-decoration: none solid rgb(255, 255, 255);
+          text-decoration: none solid rgb(255, 255, 255);
 }
 main .main-tree .about-two .text p {
   text-indent: 8px;
@@ -172,7 +175,8 @@ main .main-tree .about-two .text p {
   line-height: 37.6008px;
   letter-spacing: 0.25px;
   font-weight: 400;
-  text-decoration: none solid rgb(255, 255, 255);
+  -webkit-text-decoration: none solid rgb(255, 255, 255);
+          text-decoration: none solid rgb(255, 255, 255);
 }
 main .main-tree .about-two p {
   font-family: "aeonik_pro_trialregular";
@@ -185,6 +189,4 @@ main .main-tree .about-two p a {
 }
 main .main-tree .about-two p a {
   text-decoration: none;
-}
-
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
