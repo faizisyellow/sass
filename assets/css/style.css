@@ -149,6 +149,11 @@ main .main-tree .about-one p {
 main .main-tree .about-one p a {
   color: #ffffff;
 }
+main .main-tree .about-one p a i {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #3ddda8;
+}
 main .main-tree .about-one p a {
   text-decoration: none;
 }
@@ -186,6 +191,11 @@ main .main-tree .about-two p {
 }
 main .main-tree .about-two p a {
   color: #ffffff;
+}
+main .main-tree .about-two p a i {
+  margin-left: 20px;
+  font-size: 20px;
+  color: #0048ff;
 }
 main .main-tree .about-two p a {
   text-decoration: none;

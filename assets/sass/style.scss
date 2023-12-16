@@ -45,7 +45,8 @@ $Color: (
   color: map-get($map: $Color, $key: $color-btn);
   cursor: pointer;
 }
-@mixin aboutComponent($parent, $bg) {
+
+@mixin aboutComponent($parent, $bg, $colorIcon) {
   background-color: map-get($map: $Color, $key: $bg);
   color: map-get($map: $Color, $key: "white-color");
   .#{$parent} {
@@ -74,6 +75,12 @@ $Color: (
     letter-spacing: 0.25px;
     a {
       color: map-get($map: $Color, $key: "white-color");
+
+      i {
+        margin-left: 20px;
+        font-size: 20px;
+        color: map-get($map: $Color, $key: $colorIcon);
+      }
     }
     @include removeLink(true);
   }
@@ -178,10 +185,10 @@ main {
   .main-tree {
     @include inlineLayout();
     .about-one {
-      @include aboutComponent(text, blue-color);
+      @include aboutComponent(text, blue-color, green-color);
     }
     .about-two {
-      @include aboutComponent(text, green-color);
+      @include aboutComponent(text, green-color, blue-color);
     }
   }
 }
